@@ -44,6 +44,8 @@ POST /quiz/submit/{id} → Submit answers and return the final score
 
 Spring Boot → For building each microservice
 
+PostgreSQL → For Database
+
 REST APIs → For inter-service communication
 
 🚀 Getting Started
