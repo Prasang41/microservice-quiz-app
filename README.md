@@ -9,25 +9,11 @@ The application is composed of several independent services that communicate wit
 
 Core Services
 
-Question Service
+Question Service → Manages all quiz questions (create, retrieve, organize).
 
-Manages all quiz questions.
+Quiz Service → Orchestrates the quiz flow, assembles questions, and calculates scores.
 
-Responsible for creating, retrieving, and organizing questions.
-
-Quiz Service
-
-Orchestrates the quiz flow.
-
-Fetches questions from the Question Service.
-
-Assembles them into a quiz and calculates the user’s score.
-
-API Gateway (Implicit)
-
-A single entry point for all client requests.
-
-Routes traffic to the appropriate backend service.
+API Gateway (Implicit) → Routes client requests to the right backend service.
 
 📌 Core Services & Responsibilities
 📝 Question Service
@@ -36,11 +22,11 @@ Handles all question-related logic.
 
 Endpoints:
 
-POST /question/add → Add a new question.
+POST /question/add → Add a new question
 
-GET /question/allQuestions → Retrieve all questions.
+GET /question/allQuestions → Retrieve all questions
 
-GET /question/category/{category} → Fetch questions by category.
+GET /question/category/{category} → Fetch questions by category
 
 🎯 Quiz Service
 
@@ -48,24 +34,24 @@ Handles the overall quiz flow, relying on the Question Service for data.
 
 Endpoints:
 
-POST /quiz/create → Create a new quiz from available questions.
+POST /quiz/create → Create a new quiz from available questions
 
-GET /quiz/get/{id} → Retrieve a quiz by its ID.
+GET /quiz/get/{id} → Retrieve a quiz by its ID
 
-POST /quiz/submit/{id} → Submit answers and return the final score.
+POST /quiz/submit/{id} → Submit answers and return the final score
 
 🛠️ Technologies
 
-Spring Boot → For building each microservice.
+Spring Boot → For building each microservice
 
-REST APIs → Used for inter-service communication.
+REST APIs → For inter-service communication
 
 🚀 Getting Started
 ✅ Prerequisites
 
-Java Development Kit (JDK 17+)
+Java Development Kit (JDK 17 or higher)
 
-Maven (3.6.3+)
+Maven 3.6.3 or higher
 
 ⚙️ Setup
 
